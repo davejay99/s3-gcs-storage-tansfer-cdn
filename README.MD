@@ -18,8 +18,8 @@
 
 ## Limitations
 
-- It can transfer objects from a single S# bucket to a single GCS bucket.
-- Either it can use signed URL or public URL at a time.
+- It can transfer objects from a single S3 bucket to a single GCS bucket.
+- Either it can use signed URLs or public URLs at a time.
 
 ## Publisher configuration
 
