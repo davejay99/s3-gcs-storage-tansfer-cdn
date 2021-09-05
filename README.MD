@@ -4,7 +4,7 @@
 
 ## Architecture
 
-![Architecture](assets/arch.png)
+![Architecture](./assets/arch.png)
 
 - Publisher program lists the bucket objects and its metadata using boto3 client and psuhes the list to a Pub/Sub topic.
 - One or more worker instances then pulls object config list and uses it to transfer data from S3 bucket to GCS bucket
