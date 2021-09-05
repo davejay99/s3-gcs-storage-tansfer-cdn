@@ -6,13 +6,12 @@
 
 ![Architecture](./assets/arch.png)
 
-- Publisher program lists the bucket objects and its metadata using boto3 client and psuhes the list to a Pub/Sub topic.
-- One or more worker instances then pulls object config list and uses it to transfer data from S3 bucket to GCS bucket
+- Publisher program lists the bucket objects and its metadata using boto3 client and pushes the list to a Pub/Sub topic.
+- One or more worker instances then pulls object config list and uses it to transfer data from S3 bucket to GCS bucket through Cloudfront URLs.
 
 ## Features
 
-- Generates list of object config (url and object metadata) present in the S3 bucket using boto3 client and pushes it to Pub/Sub.
-- As Pub/Sub is used for URL list, more instances can be added in parallel to increase data transfer rate.
+- Generates list of object config (url and object metadata) present in the S3 bucket using boto3 client and pushes it to Pub/Sub. As Pub/Sub is used for URL list, more instances can be added in parallel to increase data transfer rate.
 - Can use signed URL (custom policy) with Cloudfront.
 - Multithreaded transfer
 
