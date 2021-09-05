@@ -1,0 +1,7 @@
+google-cloud-pubsub
+google-cloud-storage
+google-api-core
+google-auth
+google-resumable-media
+google-cloud-logging
+boto3
