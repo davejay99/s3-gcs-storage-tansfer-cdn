@@ -64,5 +64,27 @@
 - In case if object is not downloaded (if status code is other than 200 or pyCurl error) then the object information if pushed to `PUBSUB_ERROR_TOP_ID` Pub/Sub topic defined in `worker/config.py`.
 - Same applies to GCS upload error also.
 
-## Steps to install pyCurl library
+## Steps to setup environment
 
+- Install python3
+    ```
+    sudo apt update
+    sudo apt install software-properties-common
+    sudo add-apt-repository ppa:deadsnakes/ppa
+    sudo apt update
+    sudo apt -y install python3.8
+    sudo apt -y install python3-pip
+    pip3 install --upgrade pip
+    ```
+- Install python modules
+    ```
+    pip3 install -r requirements.txt
+    ```
+- Install pyCurl library
+    ```
+    sudo apt-get -y install libssl-dev libcurl4-openssl-dev python3.8-dev
+    wget https://files.pythonhosted.org/packages/47/f9/c41d6830f7bd4e70d5726d26f8564538d08ca3a7ac3db98b325f94cdcb7f/pycurl-7.44.1.tar.gz
+    tar -zxvf pycurl-7.44.1.tar.gz
+    cd pycurl-7.44.1
+    sudo python3 setup.py install
+    ```
