@@ -19,7 +19,7 @@
 ## Limitations
 
 - It can transfer objects from a single S3 bucket to a single GCS bucket.
-- Either it can use signed URLs or public URLs at a time.
+- Either it can use signed URLs or public URLs in single run.
 
 ## Publisher configuration
 
